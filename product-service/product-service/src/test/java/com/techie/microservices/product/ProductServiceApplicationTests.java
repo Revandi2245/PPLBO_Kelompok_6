@@ -39,8 +39,8 @@ class ProductServiceApplicationTests {
 		String requestBody = """
 					{
 						"name" : "iphone 15",
-						"description" : "hp mahal",
-						"price" : 10000
+						"description" : "iphone 15 is a smart phone from apple",
+						"price" : 1000
 					}
 				""";
 
@@ -53,8 +53,8 @@ class ProductServiceApplicationTests {
 				.statusCode(201)
 				.body("id", Matchers.notNullValue())
 				.body("name", Matchers.equalTo("iphone 15"))
-				.body("description", Matchers.equalTo("hp mahal") )
-				.body("price", Matchers.equalTo(10000));
+				.body("description", Matchers.equalTo("iphone 15 is a smart phone from apple") )
+				.body("price", Matchers.equalTo(1000));
 	}
 
 }
